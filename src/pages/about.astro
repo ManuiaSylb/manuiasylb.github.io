@@ -20,6 +20,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           src="/assets/about.png"
           alt="Manuia Sylvestre-Baron at work with a colleague"
         />
+
+        <a href="/assets/CV.pdf" download class="cv-download-button">
+          Télécharger mon CV
+        </a>
       </Hero>
 
       <section>
@@ -106,6 +110,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
+  .cv-download-button {
+    display: inline-block;
+    margin-top: 0.75rem; /* un peu moins d'espace au-dessus */
+    padding: 0.4rem 0.8rem; /* bouton plus petit */
+    font-size: 0.875rem; /* taille de texte réduite */
+    background-color: var(--gray-800);
+    color: var(--gray-0);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
+  }
   .about {
     display: flex;
     flex-direction: column;
